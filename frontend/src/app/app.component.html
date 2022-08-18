@@ -1,0 +1,14 @@
+<main>
+
+  <div class="cards">
+    <div *ngIf="equipmentsList.length > 0">
+      <app-equipment-card *ngFor="let equipment of equipmentsList" [equipment]="equipment"></app-equipment-card>
+    </div>
+    <app-no-equipment *ngIf="equipmentsList.length == 0"></app-no-equipment>
+  </div>
+  
+  <div class="equipment">
+    <app-equipment [equipment]="thisEquipment"></app-equipment>
+  </div>
+
+</main>

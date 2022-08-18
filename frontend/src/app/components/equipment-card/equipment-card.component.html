@@ -1,0 +1,32 @@
+<div class="card" *ngIf="equipment">
+  <h3>Equipamento #{{equipment.id}}</h3>
+
+  <div class="status">
+    
+    <div class="item">
+      <p>CPU</p>
+      <progress [value]="equipment.usage.cpu" max="100"></progress>
+      <span>{{equipment.usage.cpu}}%</span>
+    </div>
+
+    <div class="item">
+      <p>RAM</p>
+      <progress [value]="equipment.usage.ram" max="100"></progress>
+      <span>{{equipment.usage.ram}}%</span>
+    </div>
+
+    <div class="item">
+      <p>Disk</p>
+      <progress [value]="equipment.usage.disk" max="100"></progress>
+      <span>{{equipment.usage.disk}}%</span>
+    </div>
+
+    <div class="item">
+      <p>Internet</p>
+      <progress [value]="equipment.usage.internet" max="100"></progress>
+      <span>{{equipment.usage.internet}}%</span>
+    </div>
+
+  </div>
+
+</div>
