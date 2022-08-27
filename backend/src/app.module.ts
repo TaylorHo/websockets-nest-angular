@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { CommunicationGateway } from './communication.gateway';
+import { WebsocketsGateway } from './websockets.gateway';
+import { HttpApiController } from './http-api.controller';
 
 @Module({
   imports: [],
-  controllers: [],
-  providers: [CommunicationGateway],
+  controllers: [HttpApiController],
+  providers: [WebsocketsGateway],
 })
 export class AppModule {}

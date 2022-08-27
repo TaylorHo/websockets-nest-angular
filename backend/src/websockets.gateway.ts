@@ -2,7 +2,7 @@ import { WebSocketGateway, WebSocketServer, SubscribeMessage, OnGatewayConnectio
 
 // this line makes the WebSockets connection possible
 @WebSocketGateway()
-export class CommunicationGateway implements OnGatewayConnection, OnGatewayDisconnect {
+export class WebsocketsGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
   // the server, used to send the messages to the connected clients
   @WebSocketServer() server: any;
