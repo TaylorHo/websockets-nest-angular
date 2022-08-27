@@ -7,6 +7,7 @@ import { EquipmentCardComponent } from './components/equipment-card/equipment-ca
 import { NoEquipmentComponent } from './components/no-equipment/no-equipment.component';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { ToastComponent } from './components/toast/toast.component';
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: { transports: ['websocket'] } };
 
 @NgModule({
@@ -14,7 +15,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: { transp
     AppComponent,
     EquipmentComponent,
     EquipmentCardComponent,
-    NoEquipmentComponent
+    NoEquipmentComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,

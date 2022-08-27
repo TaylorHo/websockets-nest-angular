@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   public equipmentsList: EquipmentInterface[] = [];
   public thisEquipment?: EquipmentInterface;
+  public showDisconnectedToast: boolean = false;
   private timer: any;
 
   constructor(
@@ -40,6 +41,14 @@ export class AppComponent implements OnInit {
 
       this.equipmentsList = newData;
 
+    });
+
+    this.communicationService.connectedEquipments().subscribe((connectionUpdateType: string) => {
+      if (connectionUpdateType == 'left') {
+        this.equipmentsList = [];
+        this.showDisconnectedToast = true;
+        setTimeout(() => this.showDisconnectedToast = false, 5000);
+      }
     });
 
     this.updateEquipment(); // create initial usage attributes

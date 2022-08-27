@@ -11,4 +11,6 @@
     <app-equipment [equipment]="thisEquipment"></app-equipment>
   </div>
 
+  <app-toast *ngIf="showDisconnectedToast" text="Equipamento desconectado. Recarregando..."></app-toast>
+
 </main>
