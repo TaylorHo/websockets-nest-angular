@@ -1,16 +1,19 @@
-version: "3.8"
+version: "3.9"
 
 services:
   
   frontend:
     build:
       context: ./frontend
+      args:
+        ENV: ${ENV}
     restart: on-failure
     container_name: frontend-websockets
     depends_on:
       - backend
     ports:
       - "80:80"
+      - "443:443"
   
   backend:
     build:
