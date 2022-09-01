@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  
+  frontend:
+    build:
+      context: ./frontend
+    restart: on-failure
+    container_name: frontend-websockets
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+  
+  backend:
+    build:
+      context: ./backend
+    restart: on-failure
+    container_name: backend-websockets
+    ports:
+      - "3000:3000"
+

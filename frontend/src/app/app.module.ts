@@ -8,7 +8,7 @@ import { NoEquipmentComponent } from './components/no-equipment/no-equipment.com
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { ToastComponent } from './components/toast/toast.component';
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: { transports: ['websocket'] } };
+const config: SocketIoConfig = { url: 'http://127.0.0.1:3000', options: { transports: ['websocket'] } };
 
 @NgModule({
   declarations: [
